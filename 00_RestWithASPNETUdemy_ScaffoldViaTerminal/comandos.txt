@@ -1,0 +1,6 @@
+dotnet new sln -o RestWithASPNETUdemy --criando solution
+
+dotnet new webapi -o RestWithASPNETUdemy --criando projeto WebAPI
+
+dotnet sln add ./RestWithASPNETUdemy/RestWithASPNETUdemy.csproj --adicionar o projeto a solution
+
