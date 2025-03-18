@@ -1,11 +1,11 @@
 sudo: required
 dist: bionic
-language: c#
+language: csharp
 mono: none
 dotnet: 8.0
 services: docker
 before_install:
-  - cd 19_RestWithASPNETUdemy_AddingDockerSupport/
+  - cd 19_RestWithASPNETUdemy_AddingDockerSupport/RestWithASPNETUdemy
   - echo "We are in the right folder!"
 script:
   - docker-compose build
@@ -14,11 +14,11 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker tag rest-with-asp-net-udemy-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID;
     docker tag rest-with-asp-net-udemy:latest $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID;
+    docker tag rest-with-asp-net-udemy-db:latest $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID;
     docker push $DOCKER_USERNAME/rest-with-asp-net-udemy:$TRAVIS_JOB_ID;
     docker push $DOCKER_USERNAME/rest-with-asp-net-udemy-db:$TRAVIS_JOB_ID;
   on:
     branch: master
 notifications:
- email: false
+  email: false
