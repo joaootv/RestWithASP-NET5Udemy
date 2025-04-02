@@ -103,12 +103,12 @@ builder.Services.AddSwaggerGen(c =>
 	c.SwaggerDoc("v1",
 		new Microsoft.OpenApi.Models.OpenApiInfo
 		{
-			Title = "Rest API's From 0 to Azure with ASP.NET Core 8 and Docker",
+			Title = "Rest API's From 0 to Azure with ASP.NET Core 8 and Docker - Foo Bar",
 			Version = "v1",
 			Description = "API RESTful developed in course 'Rest API's From 0 to Azure with ASP.NET Core 8 and Docker'",
 			Contact = new Microsoft.OpenApi.Models.OpenApiContact
 			{
-				Name = "Jo„o Ot·vio",
+				Name = "Jo√£o Ot√°vio",
 				Url = new Uri("https://github.com/joaootv")
 			}
         });
